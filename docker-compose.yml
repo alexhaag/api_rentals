@@ -1,9 +1,9 @@
 version: "3.9"
 
 services:
-  database: #ESSE É O NOME DO SERVICE QUE DEVE ESTAR NO ARQUIVO DE CRIAÇÃO DE CONEXÃO
+  database_rentx: #ESSE É O NOME DO SERVICE QUE DEVE ESTAR NO ARQUIVO DE CRIAÇÃO DE CONEXÃO
     image: postgres
-    container_name: database_ignite
+    container_name: database_rentx
     restart: always
     ports: 
       - 5432:5432
@@ -25,10 +25,9 @@ services:
     volumes: 
       - .:/usr/app
     links: 
-      - database
+      - database_rentx
     depends_on:
-      - database
-
+      - database_rentx
 
 
 volumes:

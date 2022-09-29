@@ -7,5 +7,6 @@ const specificationsRoutes = Router();
 const createSpecificationController = new CreateSpecificationController()
 
 specificationsRoutes.post("/", createSpecificationController.handle)
+// specificationsRoutes.get("/", )
 
 export { specificationsRoutes };
